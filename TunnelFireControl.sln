@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TunnelFireControl", "TunnelFireControl\TunnelFireControl.csproj", "{EB705ED3-8630-4B88-88FF-C472D66D9DA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WantongTech.Monitor.Terminal.PumpViewMonitor", "WantongTech.Monitor.Terminal.PumpViewMonitor\WantongTech.Monitor.Terminal.PumpViewMonitor.csproj", "{23FBB9AE-F48D-4E7D-ABCA-DD9F8F72A2AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB705ED3-8630-4B88-88FF-C472D66D9DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB705ED3-8630-4B88-88FF-C472D66D9DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB705ED3-8630-4B88-88FF-C472D66D9DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB705ED3-8630-4B88-88FF-C472D66D9DA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23FBB9AE-F48D-4E7D-ABCA-DD9F8F72A2AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23FBB9AE-F48D-4E7D-ABCA-DD9F8F72A2AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23FBB9AE-F48D-4E7D-ABCA-DD9F8F72A2AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23FBB9AE-F48D-4E7D-ABCA-DD9F8F72A2AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB17A800-3EB2-4F94-A985-8632C684C33F}
+	EndGlobalSection
+EndGlobal

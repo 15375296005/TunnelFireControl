@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23FBB9AE-F48D-4E7D-ABCA-DD9F8F72A2AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WantongTech.Monitor.Terminal.PumpViewMonitor</RootNamespace>
+    <AssemblyName>WantongTech.Monitor.Terminal.PumpViewMonitor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\MonitorTerminal\WantongTech.Monitor.Terminal.Shell\bin\Debug\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.65.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TunnelFireControl">
+      <HintPath>..\..\..\..\TunnelFireControl\TunnelFireControl\TunnelFireControl\bin\Debug\TunnelFireControl.exe</HintPath>
+    </Reference>
+    <Reference Include="WantongTech.Core">
+      <HintPath>..\MonitorTerminal\WantongTech.Monitor.Terminal.Shell\bin\Debug\WantongTech.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\Dao\DaoFactory.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\Dao\DeviceLogDao.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\Dao\DeviceLogEntity.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\Dao\LiquidLevelDao.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\Dao\LiquidLevelEntity.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\Dao\SqlHelper.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\DeviceChannel\ChannelState.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\DeviceChannel\DeviceChannelBase.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\DeviceChannel\DeviceChannelFactory.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\DeviceChannel\IDeviceChannel.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\DeviceChannel\IDeviceChannelFactory.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\DeviceChannel\PortDeviceChannel.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\DeviceChannel\TcpDeviceChannel.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\DeviceChannel\UdpDeviceChannel.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\PumpViewMonitorView.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\PumpViewMonitorPlugin.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\PlcDriver\IPlcDriver.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\PlcDriver\LuanbeiSiemensDriver.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\PlcDriver\ModbusRtu.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\UserControls\PumpDataWindow.xaml.cs">
+      <DependentUpon>PumpDataWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\UserControls\FireControlMain.xaml.cs">
+      <DependentUpon>FireControlMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\UserControls\FireControlMonitor.xaml.cs">
+      <DependentUpon>FireControlMonitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\UserControls\LiquidLevel.xaml.cs">
+      <DependentUpon>LiquidLevel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\UserControls\LiquidLevelDataWindow.xaml.cs">
+      <DependentUpon>LiquidLevelDataWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\Terminal\PumpViewMonitor\UserControls\PumpModel.xaml.cs">
+      <DependentUpon>PumpModel.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonitorServer\WantongTech.Monitor.Sdk\WantongTech.Monitor.Sdk.csproj">
+      <Project>{479e8597-1356-436f-a609-5776eee6c03d}</Project>
+      <Name>WantongTech.Monitor.Sdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonitorTerminal\WantongTech.Monitor.Terminal.Resource\WantongTech.Monitor.Terminal.Resource.csproj">
+      <Project>{e3d7b339-8267-4e22-82d4-ece374d742d7}</Project>
+      <Name>WantongTech.Monitor.Terminal.Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonitorTerminal\WantongTech.Monitor.Terminal.Sdk\WantongTech.Monitor.Terminal.Sdk.csproj">
+      <Project>{2c9ebc12-9b87-468d-a293-a675731ecd71}</Project>
+      <Name>WantongTech.Monitor.Terminal.Sdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonitorTerminal\WantongTech.Monitor.Terminal.UIFramework\WantongTech.Monitor.Terminal.UIFramework.csproj">
+      <Project>{752c5b02-316b-4576-8d11-5592835c2592}</Project>
+      <Name>WantongTech.Monitor.Terminal.UIFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Monitor\Terminal\PumpViewMonitor\Resource\Background.png" />
+    <Content Include="Monitor\Terminal\PumpViewMonitor\Resource\liquid_level.png" />
+    <Content Include="Monitor\Terminal\PumpViewMonitor\Resource\pump_closed.png" />
+    <Content Include="Monitor\Terminal\PumpViewMonitor\Resource\pump_opened.png" />
+    <Content Include="Monitor\Terminal\PumpViewMonitor\UserControls\Background.png" />
+    <Content Include="Monitor\Terminal\PumpViewMonitor\UserControls\TunnelBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Monitor\Terminal\PumpViewMonitor\UserControls\FireControlMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Monitor\Terminal\PumpViewMonitor\UserControls\FireControlMonitor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Monitor\Terminal\PumpViewMonitor\UserControls\LiquidLevel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Monitor\Terminal\PumpViewMonitor\UserControls\PumpDataWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Monitor\Terminal\PumpViewMonitor\UserControls\LiquidLevelDataWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Monitor\Terminal\PumpViewMonitor\UserControls\PumpModel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
